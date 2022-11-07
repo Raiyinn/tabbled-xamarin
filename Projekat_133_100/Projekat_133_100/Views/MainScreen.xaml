@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Top"
+             x:Class="Projekat_133_100.Views.MainScreen"
+             BarBackgroundColor="#EA6D6D"
+             BackgroundColor="AntiqueWhite">
+    <ContentPage Title="Home">
+        <StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <StackLayout Orientation="Horizontal" Margin="20">
+                    <Label Text="Hello,"
+                    TextColor="DarkGray"
+                    FontSize="24"
+                    />
+                    <Label 
+                    x:Name="CurrentUsername"
+                    FontSize="24"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    />
+                    <!-- <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Frame Margin="20,16,20,16"
+                            CornerRadius="36"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            VerticalOptions="Start"
+                            HorizontalOptions="End"
+                            IsClippedToBounds="True"
+                            >
+                        <Image Source="profileicon.png"
+                                Aspect="AspectFill"
+                                WidthRequest="15"
+                                HeightRequest="15"
+                                />
+                    </Frame>
+                </StackLayout> -->
+                </StackLayout>
+                <Label Text="Welcome to Tabbled!"
+                   FontSize="32"
+                   TextColor="Black"
+                   Margin="40,0,0,20"
+                   HorizontalTextAlignment="Start"
+                   
+                    FontAttributes="Bold"
+                   />
+                <Label Text="Choose your favorite Café&#10;and save a table for you and&#10;your friends!"
+                   FontSize="24"
+                   TextColor="Black"
+                   Margin="40,0,0,20"
+                   HorizontalTextAlignment="Start"
+                   FontAttributes="Bold"
+                   />
+
+                <StackLayout>
+                    <Label Text="Available Cafés near you"
+                           FontSize="20"
+                           TextColor="Black"
+                           HorizontalOptions="Start"
+                           Margin="40, 20, 20, 0"
+                        />
+                    <CarouselView x:Name="Caffes" PeekAreaInsets="60" HeightRequest="250" Margin="0, 0, 0, 0">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DetailPage_Clicked"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Frame HeightRequest="300" WidthRequest="400"
+                                       BackgroundColor="White" Padding="0"
+                                       HasShadow="True" Margin="10" CornerRadius="10"
+                                       HorizontalOptions="CenterAndExpand">
+                                        <Grid>
+                                            <StackLayout BackgroundColor="Black">
+                                                <Image Source="{Binding Image}" 
+                                                   Opacity="0.7"
+                                                   HeightRequest="350" 
+                                                   Aspect="AspectFill"
+                                                   />
+                                            </StackLayout>
+                                            <StackLayout Margin="0,0,0,10">
+                                                <Label Text="{Binding Name}" 
+                                                   TextColor="White" 
+                                                   FontSize="18" 
+                                                   FontAttributes="None" Margin="15,0"
+                                                   VerticalOptions="EndAndExpand"
+                                                   />
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Frame 
+                        BackgroundColor="#EA6D6D"
+                        HeightRequest="25"
+                    />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Profile">
+        <StackLayout Orientation="Vertical">
+            <Image
+                Source="cafebackground.jpg"
+                Aspect="AspectFill"
+                HeightRequest="500"
+                />
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Frame
+                    CornerRadius="24"
+                    BackgroundColor="AntiqueWhite"
+                    HeightRequest="500"
+                    Margin="0,-100,0,0"
+                    >
+                    <StackLayout VerticalOptions="StartAndExpand">
+                        
+                        <Image Source="profileicon.png"
+                        Aspect="AspectFit"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        />
+                        <StackLayout Orientation="Horizontal" Margin="20,20,0,5">
+                        <Label Text="Username: "
+                        TextColor="DarkGray"
+                        FontSize="24"
+                        />
+                        <Label 
+                        x:Name="UserUsername"
+                        FontSize="24"
+                        TextColor="Black"
+                        />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="20,0,0,20">
+                        <Label Text="Password: "
+                        TextColor="DarkGray"
+                        FontSize="24"
+                        />
+                            <Label 
+                        x:Name="UserPassword"
+                        FontSize="24"
+                        TextColor="Black"
+                        />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

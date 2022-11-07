@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projekat_133_100.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#EA6D6D">
+
+            <Image Source="bar.png" WidthRequest="150" Margin="0, 20, 0, 0"/>
+            <Label 
+                    Text="Enter username: "
+                    TextColor="AntiqueWhite"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="PoppinsMedium"
+                    FontSize="14"
+                    Margin="0, 20, 0, 0"
+                    />
+            <Entry 
+                    WidthRequest="300"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Placeholder="Username"
+                    x:Name="EntryUsername"
+                    />
+            <Label 
+                    Text="Enter email: "
+                    TextColor="AntiqueWhite"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="PoppinsMedium"
+                    FontSize="14"
+                    Margin="0, 20, 0, 0"
+                    />
+            <Entry 
+                    WidthRequest="300"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Placeholder="Email"
+                    x:Name="EntryEmail"
+                    />
+            <Label 
+                    Text="Enter password: "
+                    TextColor="AntiqueWhite"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="PoppinsMedium"
+                    FontSize="14"
+                    Margin="0, 20, 0, 0"
+                    />
+            <Entry 
+                    WidthRequest="300"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    x:Name="EntryPassword"
+                    />
+            <Label 
+                    Text="Confirm password: "
+                    TextColor="AntiqueWhite"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="PoppinsMedium"
+                    FontSize="14"
+                    Margin="0, 20, 0, 0"
+                    />
+            <Entry 
+                    WidthRequest="300"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Placeholder="Confirm password"
+                    IsPassword="True"
+                    x:Name="EntryConfirmPassword"
+                    />
+            <Button BackgroundColor="#ffae00"
+                    Text="Register"
+                    TextTransform="None"
+                    TextColor="AntiqueWhite"
+                    FontFamily="PoppinsMedium"
+                    HorizontalOptions="Center"
+                    WidthRequest="270"
+                    CornerRadius="20"
+                    Margin="0, 20, 0, 10"
+                    Clicked="SignIn_Clicked"
+                    />
+            <Label 
+                    Text="Already a user? Sign In."
+                    TextColor="AntiqueWhite"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="PoppinsMedium"
+                    FontSize="14"
+                    />
+            <Button BackgroundColor="#ffae00"
+                    Text="Sign In"
+                    TextTransform="None"
+                    TextColor="AntiqueWhite"
+                    FontFamily="PoppinsMedium"
+                    HorizontalOptions="Center"
+                    WidthRequest="270"
+                    CornerRadius="20"
+                    Clicked="Button_Clicked"
+                    />
+            
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

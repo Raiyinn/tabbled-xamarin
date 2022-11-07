@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projekat_133_100.Views.CaffeDetail"
+             BackgroundImageSource="CaffeImage"
+             >
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+            
+            <Image
+                x:Name="CaffeImage"
+                Aspect="AspectFill"
+                HeightRequest="500"
+                />
+
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Frame
+                    CornerRadius="24"
+                    BackgroundColor="AntiqueWhite"
+                    HeightRequest="500"
+                    Margin="0,-100,0,0"
+                    >
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <Label x:Name="CaffeName"
+                       HorizontalTextAlignment="Center"
+                       FontSize="24"
+                       Margin="0,20,0,20"
+                       TextColor="Black"
+                       />
+                        <Label x:Name="CaffeDesc"
+                           FontSize="18"
+                           Margin="40,0,40,20"
+                           TextColor="Black"
+                           HorizontalTextAlignment="Start"
+                        />
+                        <Button 
+                        Text="Make a Reservation"
+                        BackgroundColor="#EA6D6D"
+                        TextColor="Black"
+                        FontSize="18"
+                        HorizontalOptions="Center"
+                        WidthRequest="300"
+                        CornerRadius="25"
+                        Clicked="Reserved"
+                    />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
